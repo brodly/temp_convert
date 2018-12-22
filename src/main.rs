@@ -20,8 +20,6 @@ fn main() {
         println!("Press 1 for C to F");
         println!("Press 2 for F to C");
 
-        let mut convert_type = String::new();
-
         let mut temp = String::new();
 
         io::stdin().read_line(&mut temp)
@@ -39,29 +37,29 @@ fn main() {
         
         println!("Converted temp: {}", temp);
     }
-
-
 }
 
-fn convert(x: u32, y: str) -> u32 {
-    if y = "F" {
-        (x * 9) / 5 + 32
+fn convert(temp: u32, convert_to: u32) -> u32 {
+    if convert_to == 0 {
+        println!("{}", temp);
+        1
     }
 
-    if y = "C" {
-        ((x - 32) * 5) / 9
+    if convert_to == 1 {
+        println!("{}", temp);
+        2
     }
 }
 
 fn check(temp: u32) -> u32 {
     if temp == 1 {
             println!("Converting F to C");
-            convert(temp, "C")
+            convert(temp, 0)
         } else if temp == 2 {
             println!("Converting C to F");
-            6
+            convert(temp, 1)
         } else {
             println!("Please enter valid option");
-            7
+            0
         }
 }
