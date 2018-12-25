@@ -17,7 +17,7 @@ fn main() {
                 continue;
             },
         };
-        
+
         match convert_to {
             1 => println!("Please enter temperature (in C) to convert to F"),
             2 => println!("Please enter temperature (in F) to convert to C"),
@@ -31,7 +31,7 @@ fn main() {
 
         io::stdin().read_line(&mut temp)
             .expect("Failed to read line");
-        
+
         let temp: i32 = match temp.trim().parse() {
             Ok(num) => num,
             Err(_) => {
